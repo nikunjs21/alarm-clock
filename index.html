@@ -6,18 +6,25 @@
     <title>Alarm Clock</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Custom Style -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="text-bg-dark">
+    <!-- Bootstrap Container -->
     <div class="container-flex">
+        <!-- Row -->
         <div class="row mt-2">
+            <!-- Flex to set card on center -->
             <div class="col-12 d-flex justify-content-center">
+                <!-- Card -->
                 <div class="card card-dark w-100">
                     <div class="card-header">
                         <h3>Alarm Clock</h3>
                     </div>
+                    <!-- Card Body -->
                     <div class="card-body">
                         <h4 id="current-timer" class="text-center border-bottom"></h4>
+                        <!-- Inputs to set Alarm -->
                         <div class="row mt-4">
                             <div class="col d-flex fs-2 align-items-center">
                                 <input class="form-control m-1" min="1" max="12" type="number" id="hour">
@@ -33,6 +40,7 @@
                                 <button class="btn btn-success m-1" id="set-alarm">Set</button>
                             </div>
                         </div>
+                        <!-- Row to show Alarm Listing -->
                         <div class="row mt-4">
                             <div class="col">
                                 <h5 class="border-bottom">Alarms</h5>
@@ -41,10 +49,16 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Card Body End -->
                 </div>
+                <!-- Card End -->
             </div>
         </div>
+        <!-- Row End -->
     </div>
+    <!-- Container End -->
+
+
     <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- Ion Icons -->

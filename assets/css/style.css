@@ -1,3 +1,4 @@
+/* setting up custom fonts */
 @font-face{
     font-family: 'WizardWorld';
     src: url('../fonts/WizardWorld-Simplified.ttf') format('truetype'),
@@ -20,14 +21,17 @@ html, body{
     margin-right: 0 !important;
 }
 
+/* give card max-width */
 .card{
     max-width: 480px;
 }
 
+/* setting the height to apply overflow-y */
 #alarm-listing{
     height: 300px;
 }
 
+/* to fix mobile view */
 input{
     padding: 6px !important;
 }
