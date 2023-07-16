@@ -1,11 +1,14 @@
 // set interval to show current time as well as check if any alarm is matched with current time.
 setInterval(function () {
-    //date minus 10 minutes
   let date = new Date();
-  date.setMinutes(date.getMinutes() - 10);
-    
+
   // H:m:s AM/PM
   let time = date.toLocaleTimeString();
+  // set 0 at start if hour is less than 10
+  if (time.split(":")[0] < 10) {
+    time = `0${time}`;
+  }
+
   // get alarm list from local storage
   let alarmList = getAlarmList();
   if (alarmList) {
@@ -44,7 +47,7 @@ setAlarm.addEventListener("click", function () {
   const am_pm = document.getElementById("am-pm").value;
 
   // validations
-  if(hour == "" || minute == "" || second == "") {
+  if (hour == "" || minute == "" || second == "") {
     alert("Please fill all fields");
     return;
   }
@@ -66,10 +69,17 @@ setAlarm.addEventListener("click", function () {
 
   // convert values according to LocaleTimeString
   hour = parseInt(hour);
-  if(minute < 10){
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+
+  minute = parseInt(minute);
+  if (minute < 10) {
     minute = `0${minute}`;
   }
-  if(second < 10){
+
+  second = parseInt(second);
+  if (second < 10) {
     second = `0${second}`;
   }
 
@@ -93,7 +103,7 @@ function renderAlarmList(alarmList) {
     // reset listing first to avaoid duplicate alarm listing
     document.getElementById("alarm-listing").innerHTML = "";
     for (let alarm of alarmList) {
-        // create new li element
+      // create new li element
       let li = document.createElement("li");
 
       // set some bootstrap classes
