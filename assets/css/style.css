@@ -1,0 +1,25 @@
+@font-face{
+    font-family: 'WizardWorld';
+    src: url('../fonts/WizardWorld-Simplified.ttf') format('truetype'),
+        url('../fonts/WizardWorld-Simplified.otf') format('opentype');
+}
+
+*{
+    box-sizing: border-box !important;
+    /* Overrided Font-family. Without !important it will get font-family defined by bootstrap */
+    font-family: 'WizardWorld', Georgia, serif !important; 
+}
+
+html, body{
+    height: 100%;
+}
+
+/* Overriding of row. by default row class comes with left and right padding of 12px */
+.row, .col-12{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.card{
+    max-width: 480px;
+}
