@@ -27,3 +27,7 @@ html, body{
 #alarm-listing{
     height: 300px;
 }
+
+input{
+    padding: 6px !important;
+}
