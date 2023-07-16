@@ -23,3 +23,7 @@ html, body{
 .card{
     max-width: 480px;
 }
+
+#alarm-listing{
+    height: 300px;
+}

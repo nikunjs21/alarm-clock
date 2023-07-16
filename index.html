@@ -19,17 +19,24 @@
                     <div class="card-body">
                         <h4 id="current-timer" class="text-center border-bottom"></h4>
                         <div class="row mt-4">
-                            <div class="col d-flex">
-                                <input type="number" id="hour">
-                                <input type="number" id="minute">
-                                <input type="number" id="second">
-                                <button class="btn btn-success">Set</button>
+                            <div class="col d-flex fs-2 align-items-center">
+                                <input class="form-control m-1" min="1" max="12" type="number" id="hour">
+                                :
+                                <input class="form-control m-1" min="0" max="59" type="number" id="minute">
+                                :
+                                <input class="form-control m-1" min="0" max="59" type="number" id="second">
+                                &nbsp;
+                                <select id="am-pm" class="form-select m-1">
+                                    <option value="AM">AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <button class="btn btn-success m-1" id="set-alarm">Set</button>
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <h5 class="border-bottom">Alarms</h5>
-                                <ul id="alarm-listing">
+                                <ul id="alarm-listing" class="overflow-y-auto list-group">
                                 </ul>
                             </div>
                         </div>
@@ -40,6 +47,9 @@
     </div>
     <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/scripts.js"></script>
 </body>
