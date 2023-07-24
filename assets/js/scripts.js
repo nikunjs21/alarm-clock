@@ -86,7 +86,11 @@ setAlarm.addEventListener("click", function () {
   const alarmTime = `${hour}:${minute}:${second} ${am_pm}`;
   let alarmList = getAlarmList();
   if (alarmList) {
-    alarmList.push(alarmTime);
+    if (alarmList.indexOf(alarmTime) === -1) {
+      alarmList.push(alarmTime);
+    } else {
+      alert("Alarm already exists");
+    }
   } else {
     alarmList = [alarmTime];
   }
