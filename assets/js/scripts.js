@@ -114,10 +114,11 @@ function renderAlarmList(alarmList) {
       li.classList.add("list-group-item");
       li.classList.add("mt-1");
       li.classList.add("d-flex");
+      li.classList.add("blur");
       li.classList.add("justify-content-between");
 
       // UI which will be inside of li element. used ion-icons to make it look better
-      li.innerHTML = `${alarm} <button class="btn btn-danger btn-sm" onclick="removeAlarm('${alarm}')"><ion-icon name="trash-outline"></ion-icon></button>`;
+      li.innerHTML = `${alarm} <button class="btn btn-danger btn-sm d-flex justify-content-center align-items-center" onclick="removeAlarm('${alarm}')"><ion-icon name="trash-outline"></ion-icon></button>`;
 
       // append the li element to the ul element
       document.getElementById("alarm-listing").appendChild(li);
