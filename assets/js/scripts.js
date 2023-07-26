@@ -86,6 +86,9 @@ setAlarm.addEventListener("click", function () {
   const alarmTime = `${hour}:${minute}:${second} ${am_pm}`;
   let alarmList = getAlarmList();
   if (alarmList) {
+    // check if alarm already exists in alarm list or not. 
+    // if not exists then add it to the list. 
+    // if exists then alert user that alarm already exists.
     if (alarmList.indexOf(alarmTime) === -1) {
       alarmList.push(alarmTime);
     } else {

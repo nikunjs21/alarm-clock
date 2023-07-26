@@ -11,7 +11,7 @@
 </head>
 <body class="text-bg-dark">
     <!-- Bootstrap Container -->
-    <div class="container-flex">
+    <div class="container-flex d-flex justify-content-center align-items-center">
         <!-- Row -->
         <div class="row mt-2">
             <!-- Flex to set card on center -->
@@ -26,13 +26,15 @@
                         <h4 id="current-timer" class="text-center border-bottom"></h4>
                         <!-- Inputs to set Alarm -->
                         <div class="row mt-4">
-                            <div class="col d-flex fs-2 align-items-center">
+                            <div class="col-md-7 d-flex fs-2 align-items-center"> 
                                 <input class="form-control m-1" placeholder="HH" min="1" max="12" type="number" id="hour">
                                 :
                                 <input class="form-control m-1" placeholder="MM" min="0" max="59" type="number" id="minute">
                                 :
                                 <input class="form-control m-1" placeholder="SS" min="0" max="59" type="number" id="second">
                                 &nbsp;
+                            </div>
+                            <div class="col-md-5 d-flex fs-2 align-items-center">
                                 <select id="am-pm" class="form-select m-1">
                                     <option value="AM">AM</option>
                                     <option value="PM">PM</option>

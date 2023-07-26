@@ -20,6 +20,15 @@ body{
     background-size: cover;
 }
 
+.container-flex{
+    height: 100%;
+}
+
+/* give all buttons shadow */
+.btn{
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
 /* Overriding of row. by default row class comes with left and right padding of 12px */
 .row, .col-12{
     margin-left: 0 !important;
@@ -29,6 +38,8 @@ body{
 /* give card max-width */
 .card{
     max-width: 480px;
+    border: 0 !important;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
 /* setting the height to apply overflow-y */
@@ -41,18 +52,23 @@ input{
     padding: 6px !important;
 }
 
+/* astronaut class for to set the background image of astronaut */
 .astronaut{
     background: url('../images/astronaut.webp');
     background-size: cover;
 }
 
+/* to blur and make it little glass like */
 .blur{
     backdrop-filter: blur(10px) !important;
     background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+/* Modifying scrollbar to make it look better */
+
 .overflow-y-auto::-webkit-scrollbar {
-    width: 1em;
+    width: 0.3em;
+    border-radius: 1em;
 }
 
 .overflow-y-auto::-webkit-scrollbar-track {
@@ -61,6 +77,7 @@ input{
 
 .overflow-y-auto::-webkit-scrollbar-thumb {
     backdrop-filter: blur(10px) !important;
-    background-color: rgba(255, 255, 255, 0.5) !important;;
-    outline: 1px solid slategrey;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    outline: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 0.15em;
 }
